@@ -1,0 +1,34 @@
+disc: "Book One Water Disc 2"
+
+episodes:
+  - track: 0
+    episode: S01E10
+    title: Jet
+
+  - track: 1
+    episode: S01E11
+    title: The Great Divide
+
+  - track: 2
+    episode: S01E09
+    title: The Waterbending Scroll
+
+  - track: 3
+    episode: S01E12
+    title: The Storm
+
+  - track: 4
+    episode: S01E13
+    title: The Blue Spirit
+
+  - track: 5
+    episode: S01E15
+    title: The Fortuneteller
+
+  - track: 6
+    episode: S01E15
+    title: Bato of the Water Tribe
+
+  - track: 7
+    episode: S01E16
+    title: The Deserter

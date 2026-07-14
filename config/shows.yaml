@@ -1,0 +1,19 @@
+Avatar The Last Airbender:
+  type: tv
+  naming: tvdb
+  manifest_dir: atla
+
+Legend of Korra:
+  type: tv
+  naming: tvdb
+  manifest_dir: korra
+
+Friends:
+  type: tv
+  naming: tvdb
+  manifest_dir: friends
+
+Gilmore Girls:
+  type: tv
+  naming: tvdb
+  manifests_dir: gilmore_girls

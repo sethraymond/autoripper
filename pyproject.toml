@@ -11,14 +11,23 @@ authors = [
 ]
 dependencies = [
     "grpcio (>=1.83.0,<2.0.0)",
-    "grpcio-tools",
+    "pyyaml (>=6.0.3,<7.0.0)",
 ]
 requires-python = ">=3.10"
 
 [build-system]
-requires = ["poetry-core>=1.0.0", "setuptools"]
+requires = [
+    "poetry-core>=1.0.0",
+    "setuptools",
+    "grpcio-tools (>=1.83.0,<2.0.0)",
+]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.build]
 generate-setup-file = false
 script = "proto_gen.py"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.1.1,<10.0.0)"
+]

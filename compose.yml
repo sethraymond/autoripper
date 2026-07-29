@@ -1,0 +1,12 @@
+services:
+  autoripper:
+    image: sethraymond/autoripper:latest
+    build:
+      context: .
+      dockerfile: ripper.Dockerfile
+  transcoder:
+    image: sethraymond/autotranscoder:latest
+    build:
+      context: .
+      dockerfile: transcoder.Dockerfile
+

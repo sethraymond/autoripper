@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 
-import sys
-import subprocess
 import argparse
+import subprocess
+import sys
 from pathlib import Path
 
 RAW = Path("/data/rips/raw")
 
-parser = argparse.ArgumentParser()
+def main():
+    parser = argparse.ArgumentParser()
 
+    parser.add_argument("show", type=str)
+    parser.add_argument("disc", type=str)
 
-if len(sys.argv) != 3:
-    print("Usage: rip.py <show> <disc>")
-    sys.exit(1)
+    if len(sys.argv) != 3:
+        print("Usage: rip.py <show> <disc>")
+        sys.exit(1)
 
     show = sys.argv[1]
     disc = sys.argv[2]
@@ -26,3 +29,6 @@ if len(sys.argv) != 3:
     subprocess.run(["makemkvcon", "mkv", "disc:0", "all", str(output)], check=True)
 
     print("Rip complete")
+
+if __name__ == "__main__":
+    main()

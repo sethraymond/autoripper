@@ -3,18 +3,6 @@ FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && apt install -y \
-    mediainfo \
-    jq \
-    python3 \
-    python3-pip \
-    inotify-tools \
-    libvpl-dev \
-    libmfx-dev \
-    intel-media-va-driver-non-free \
-    vainfo \
-    wget \
-    curl \
-    libssl-dev \
     autoconf \
     automake \
     build-essential \
@@ -36,7 +24,7 @@ RUN apt update && apt install -y \
     libspeex-dev \
     libtheora-dev \
     libtool \
-    libtool-bin \ 
+    libtool-bin \
     libturbojpeg0-dev \
     libvorbis-dev \
     libx264-dev \
@@ -56,19 +44,10 @@ RUN apt update && apt install -y \
     clang \
     libva-dev \
     libdrm-dev \
+    python3-grpcio \
+    python3-grpcio-tools \
     && rm -rf /var/lib/apt/lists/*
-
-RUN apt update && apt install -y build-essential pkg-config libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev qtbase5-dev zlib1g-dev
-
-
-COPY scripts/ /opt/ripper/
-
-RUN chmod +x /opt/ripper/*.sh
-
-RUN /opt/ripper/install_makemkv.sh
 
 RUN git clone https://github.com/HandBrake/HandBrake.git /opt/HandBrake 
 WORKDIR /opt/HandBrake
 RUN ./configure --enable-qsv --disable-gtk --launch && cd build && make install
-
-CMD ["/opt/ripper/worker.sh"]

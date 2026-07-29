@@ -1,0 +1,8 @@
+syntax = "proto3";
+package autoripper;
+import "common/path.proto";
+import "common/empty.proto";
+
+service Ripper {
+  rpc RipDisk (autoripper.common.Path) returns (autoripper.common.Empty) {}
+}

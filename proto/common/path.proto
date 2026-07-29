@@ -1,0 +1,6 @@
+syntax = "proto3";
+package autoripper.common;
+
+message Path {
+  string path = 1;
+}

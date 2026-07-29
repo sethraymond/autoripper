@@ -1,0 +1,4 @@
+syntax = "proto3";
+package autoripper.common;
+
+message Empty {}

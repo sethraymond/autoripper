@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-import sys
-import yaml
 import subprocess
+import sys
 from pathlib import Path
 
+import yaml
 
 RAW = Path("/data/rips/raw")
 MEDIA = Path("/data/media/tv")

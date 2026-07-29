@@ -1,0 +1,4 @@
+{
+    "name": "autoripper-devcontainer",
+    "dockerFile": "Dockerfile"
+}

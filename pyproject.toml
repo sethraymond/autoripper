@@ -15,6 +15,9 @@ dependencies = [
 ]
 requires-python = ">=3.10"
 
+[project.scripts]
+rip = "autoripper.ripper.server:serve"
+
 [build-system]
 requires = [
     "poetry-core>=1.0.0",
